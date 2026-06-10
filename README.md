@@ -5,13 +5,13 @@
 ![App Overview](images/Screenshot%202026-06-11%20004503.png)
 
 ## 📌 Overview
-The **Loan Approval & Credit Risk Intelligent System** is a full-stack, data-driven machine learning application created to assess the default risk of an applicant by predicting the probability of default based on an array of financial, employment, and current credit properties. This tool harnesses the power of predictive ML combined with Explainable AI (SHAP) to categorize borrowers into risk bands and highlight the top reasons for that risk assessment in real time, bringing transparency to loan approval processes.
+The **Loan Approval & Credit Risk Intelligent System** is a full-stack, data-driven machine learning application created to assess the default risk of an applicant by predicting the probability of default based on financial, employment, and credit properties. This tool harnesses the power of predictive ML combined with Explainable AI (SHAP) to categorize borrowers into risk bands and highlight the top reasons for that risk assessment in real time, bringing transparency to loan approval processes.
 
 ## ✨ Key Deliverables
 - **Default Probability Prediction**: Accurately scores the percentage likelihood of an applicant defaulting based on their financial metrics (calculators internally scale local currency metrics against real-time variables).
-- **Risk Categorization**: Segments users based on their scores into intuitive risk bands (e.g., Very Low Risk, Moderate Risk, Very High Risk).
+- **Risk Categorization**: Segments users based on their scores into intuitive risk bands (e.g., Very Low Risk, Low Risk, Moderate Risk, High Risk, Very High Risk).
 - **Explainable AI with SHAP**: Integrates SHAP's TreeExplainer to dynamically provide the top 5 contributing factors to every individual prediction, ensuring decisions are interpretable.
-- **Deployment Ready ML Pipeline**: Employs an end-to-end `scikit-learn` pipeline, preserving data transformation robustness from training to real-time inference.
+- **Deployment Ready ML Pipeline**: Employs an end-to-end `scikit-learn` pipeline.
 
 ---
 
@@ -22,15 +22,13 @@ The **Loan Approval & Credit Risk Intelligent System** is a full-stack, data-dri
 | <img src="images/Screenshot%202026-06-11%20004530.png" width="400"> | <img src="images/Screenshot%202026-06-11%20004739.png" width="400"> |
 | <img src="images/Screenshot%202026-06-11%20004912.png" width="400"> | <img src="images/Screenshot%202026-06-11%20005133.png" width="400"> |
 
-*(Note: Click on images to view them in full resolution)*
-
 ---
 
 ## 🏗️ Architecture & Tech Stack
 
 - **Machine Learning**: `scikit-learn` & `pandas` for preprocessing, pipeline building, data manipulation, and predictive tree-based modeling.
-- **Explainable AI**: `shap` framework deeply integrated via the backend for interpretability.
-- **Backend RESTful API**: `FastAPI` powers a high-performance backend serving the risk model.
+- **Explainable AI**: `shap` framework integrated via the backend for interpretability.
+- **Backend RESTful API**: `FastAPI` powers a high-performance backend serving the model.
 - **Frontend Dashboard**: A highly interactive `Streamlit` application.
 
 ## 📊 Key Findings from Data Modeling
@@ -74,7 +72,4 @@ To run the interactive UI dashboard, open a separate terminal window and execute
 cd streamlit-app
 streamlit run app.py
 ```
-Your browser will automatically launch the Streamlit frontend. Enter borrower details, confirm submission, and evaluate real-time intelligent risk scoring and interpretable feature impacts!
-
----
-*Developed as an intelligent, transparent, and capable proof of concept for assessing lending risk.*
+After your browser automatically launches the Streamlit frontend, enter borrower details, confirm submission, and evaluate real-time intelligent risk scoring and interpretable feature impacts.
