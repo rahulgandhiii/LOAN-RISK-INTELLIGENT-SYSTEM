@@ -64,7 +64,7 @@ if st.button("Predict Risk"):
         "pub_rec_bankruptcies": pub_rec_bankruptcies,
         "credit_history_years": credit_history_years
     }
-    response=requests.post("http://127.0.0.1:8000/predict", json=data)
+    response=requests.post("https://loan-risk-intelligent-system.onrender.com/predict", json=data)
     if response.status_code == 200:
         result = response.json()
     else:
